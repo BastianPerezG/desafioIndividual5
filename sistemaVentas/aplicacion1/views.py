@@ -112,7 +112,7 @@ class IngresoView(TemplateView):
     def get(self, request, *args, **kwargs):
         form = FormularioLogin()
         return render(request, self.template_name, { "form": form })
-  
+
     def post(self, request, *args, **kwargs):
         form = FormularioLogin(request.POST)
         if form.is_valid():
